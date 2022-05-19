@@ -1,3 +1,7 @@
 # tbor8080.github.io
 ---
-  test github pages
+  <script type="text/javascript">
+    var login = prompt("パスワードを入力してください。")
+    conosole.log(login)
+    
+  </script>
