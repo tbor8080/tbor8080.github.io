@@ -1,0 +1,33 @@
+title: Portforio List
+lists :
+  - title: Pythonと情報処理技術者科（制作物）
+    description:
+    url: https://github.com/tbor8080/pyhongo/blob/main/pdf/pyhongo-selen.pdf 
+    schedule: 
+    thumbnail:  
+  
+  - title: Web Across
+    description:
+    url: https://www.web-across.com/
+    schedule: null
+    thumbnail: 
+  
+  - title: かけるブック
+    description:
+    url: javascript:void(0);
+    schedule: null
+    thumbnail: 
+  
+  - title: mixi Hackathon
+    description:
+    url: javascript:void(0);
+    schedule: null
+    thumbnail: 
+  
+  - title: まちむら交流機構
+    description:
+    url: https://www.kouryu.or.jp/
+    schedule: null
+    thumbnail: 
+
+  
