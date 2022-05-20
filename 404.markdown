@@ -1,0 +1,9 @@
+---
+    layout: default
+    permalink: /404.html 
+---
+# 404
+<p>Page Not Found :(</p>
+<script type="text/javascript">
+    location.href="/"
+</script>
