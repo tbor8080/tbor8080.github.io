@@ -49,10 +49,7 @@ else{
         stg.setItem("access", 0);
     } 
 }
-if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-	location.replace("./404.html");
-    alert("PCでご覧ください。")
-}
+
 function Login(){
     auth=prompt("パスワード:");
     var sha256 = new jsSHA('SHA-256', "TEXT", {eccoding:'UTF-8'});
@@ -143,6 +140,11 @@ $(function(){
         $("body").css("overflow","hidden");
     }
 
+    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
+        // location.replace("./404.html");
+        alert("PCでご覧ください。");
+        $("body").html("");
+    }
     function SlideShow(){
         // slide show
         counter = 0;
