@@ -60,7 +60,6 @@ function Login(){
     url = "/"+digest+"/";
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
         // location.replace("./404.html");
-        // alert("PCでご覧ください。");
         $("body").html("");
     }else{
         location.replace(url);
