@@ -51,17 +51,17 @@ else{
 }
 
 function Login(){
-    auth=prompt("パスワード:");
-    var sha256 = new jsSHA('SHA-256', "TEXT", {eccoding:'UTF-8'});
-    sha256.update(auth);
-    var digest = sha256.getHash("HEX");
-    // Easy authlize
-    // 本番 - sha 256
-    url = "/"+digest+"/";
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
         // location.replace("./404.html");
         $("body").html("");
     }else{
+        auth=prompt("パスワード:");
+        var sha256 = new jsSHA('SHA-256', "TEXT", {eccoding:'UTF-8'});
+        sha256.update(auth);
+        var digest = sha256.getHash("HEX");
+        // Easy authlize
+        // 本番 - sha 256
+        url = "/"+digest+"/";
         location.replace(url);
     }
     
