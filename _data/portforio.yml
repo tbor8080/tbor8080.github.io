@@ -1,33 +1,50 @@
 title: Portforio List
 lists :
+  - title: Web Portforio by Jekyll
+    description: ウェブポートフォリオをHTML5/CSS3/Jekyllで開発、期間、2日。Chrome推奨、クロスブラウザー対応は現状していません。
+    url: https://tbor8080.github.io/
+    schedule: 2022
+    thumbnail: /assets/img/portforio/screen000001.png
+    tag: jekyll 
+  
+  - title: Web App Manager Mini for Python 
+    description: 職業訓練校在籍中に開発環境を迅速に用意できないか相談され、プロトタイプとして開発を行なっています。現在も継続。<br>python+flask/gunicorn+sqlite3に対応、ウェブアプリ開発環境コンソールアプリ
+    url: https://www.github.com/tbor8080/pyhongo/
+    schedule: 2021-
+    thumbnail: /assets/img/py/screen000001.png
+    tag: py
+
   - title: Pythonと情報処理技術者科（制作物）
-    description:
+    description: Seleniumによるブラウザの自動化でテストの自動化以外に何かできないか興味を持ち、最終課題に選びました。主にSelenium機能面での学習資料となりました。
     url: https://github.com/tbor8080/pyhongo/blob/main/pdf/pyhongo-selen.pdf 
-    schedule: 
-    thumbnail:  
+    schedule: 2021/05-2021/07
+    thumbnail: /assets/img/hongo/screen000001.png
+    tag: hongo 
   
   - title: Web Across
-    description:
+    description: ワイヤーフレーム作成・コーディング（HTML/CSS/JavaScript）・PHPアプリケーションの保守・運用などを担当。
     url: https://www.web-across.com/
-    schedule: null
-    thumbnail: 
+    schedule: 2002-2014
+    thumbnail: /assets/img/across/screen000001.png
+    tag: across
+  
+  - title: mixi Hackathon (しりとりアプリ)
+    description: デベロッパーサミット2011ハッカソンにて開発。mixiGraph(oAuth)+HTML5+PHPで開発した「しりとり」アプリ。mixi社員賞受賞。
+    url: https://codezine.jp/article/detail/5836
+    schedule: 2011
+    thumbnail: /assets/img/mixi/screen000001.png
+    tag: mixi
+  
+  - title: まちむら交流機構 / グリーンツーリズム / オーライ・ジャパン
+    description: UI開発(GoogleMap API v2を利用した検索UI開発など)フロントエンド開発/CMS・Webサーバ保守・構築/AWSサーバ移行
+    url: https://www.kouryu.or.jp/
+    schedule: 2011
+    thumbnail: /assets/img/machimura/screen000001.png
+    tag: machimura 
   
   - title: かけるブック
-    description:
-    url: javascript:void(0);
-    schedule: null
-    thumbnail: 
-  
-  - title: mixi Hackathon
-    description:
-    url: javascript:void(0);
-    schedule: null
-    thumbnail: 
-  
-  - title: まちむら交流機構
-    description:
-    url: https://www.kouryu.or.jp/
-    schedule: null
-    thumbnail: 
-
-  
+    description: 絵本アプリの開発依頼をされ、クリエイティブディレクターとして参加。開発フレームワーク:OpenFramwork。子供向けの読み聞かせ絵本。<br>[Yahoo!クリエイティブアートアワード2011ノミネート] (https://web.archive.org/web/20111010023940/http://creative-award.yahoo.co.jp/nominate/client.html)
+    url: http://www.televider.com/kakerubook/info.html
+    schedule: 2010
+    thumbnail: /assets/img/kakeru/screen000001.png
+    tag: kakeru

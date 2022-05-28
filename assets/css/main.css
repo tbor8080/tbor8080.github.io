@@ -1,0 +1,253 @@
+body {
+    padding:0;
+    background-color:#333;
+    /* font-set */
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    overflow: hidden;
+}
+ul{
+    padding:0;
+    margin:0;
+}
+ul li{
+    list-style:none;
+    padding:0 auto;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+a:hover{
+    
+}
+#wrapper{
+    min-width: calc(100% - 10px) !important;
+    min-height: 100vh !important;
+    width:100%;
+    margin:0 auto;
+}
+article{
+    border:0px solid;
+    margin:0;
+    height:768px;
+    vertical-align: middle;
+    background-color: white;
+    opacity: 80%;
+    position:relative;
+    background-repeat:none;
+    background-size: cover;
+    min-height: 100vh;
+}
+article .layouts{
+    width:30%;
+    background-color: black;
+    color:white;
+    padding: 30px;
+    margin: 360px 0;
+    position: absolute;
+    top:0;
+    right:0;
+    opacity: 75%;
+    border-radius: 20px 0 0 20px;
+}
+article h4{
+    font-size:24px;
+    margin:0;
+}
+article p{
+    opacity: 80%;
+    font-size: larger;
+}
+article.portforio{
+    background-image: url(/assets/img/);
+}
+article hr{
+    border:1px white solid;
+    opacity:20%;
+}
+article a{
+    color:white;
+    animation: transform_btn 1s ease infinite;
+}
+@keyframes link_text{
+    0% {transform: scale(1),rotate(0);}
+    33% {transform: scale(1),rotate(1deg);}
+    66% {transform: scale(1),rotate(-1deg);}
+    100% {transform: scale(1),rotate(0);}
+}
+article a:hover{
+    color:rgb(0, 255, 183);
+}
+article.py{animation: py 10s ease infinite;}
+article.mixi{background-image: url(/assets/img/mixi/screen00001.png);}
+article.jekyll{background-image: url(/assets/img/jekyll/screen00001.png);}
+article.hongo{animation: hongo 10s ease infinite;}
+article.across{animation: across 10s ease infinite;}
+article.machimura{animation: machimura 15s ease infinite;}
+article.kakeru{animation: kakeru 60s ease infinite;}
+@keyframes mixi{}
+@keyframes py{
+    0% {background-image: url(/assets/img/py/screen00001.png);}
+    80% {background-image: url(/assets/img/py/screen00002.png);}
+    100% {background-image: url(/assets/img/py/screen00001.png);}
+}
+@keyframes hongo{
+    0% {background-image: url(/assets/img/hongo/screen00001.png);}
+    50% {background-image: url(/assets/img/hongo/screen00002.png);}
+    75% {background-image: url(/assets/img/hongo/screen00003.png);}
+    100% {background-image: url(/assets/img/hongo/screen00001.png);}
+}
+@keyframes across{
+    0% {background-image: url(/assets/img/across/screen00001.png);}
+    50% {background-image: url(/assets/img/across/screen00002.png);}
+    75% {background-image: url(/assets/img/across/screen00005.png);}
+    100% {background-image: url(/assets/img/across/screen00001.png);}
+}
+@keyframes machimura{
+    0% {background-image: url(/assets/img/machimura/screen00001.png);}
+    50% {background-image: url(/assets/img/machimura/screen00002.png);}
+    75% {background-image: url(/assets/img/machimura/screen00005.png);}
+    100% {background-image: url(/assets/img/machimura/screen00001.png);}
+}
+@keyframes kakeru{
+    0% {background-image: url(/assets/img/kakeru/screen00001.png);}
+    10% {background-image: url(/assets/img/kakeru/screen00002.png);}
+    20% {background-image: url(/assets/img/kakeru/screen00003.png);}
+    30% {background-image: url(/assets/img/kakeru/screen00004.png);}
+    40% {background-image: url(/assets/img/kakeru/screen00008.png);}
+    50% {background-image: url(/assets/img/kakeru/screen00009.png);}
+    60% {background-image: url(/assets/img/kakeru/screen00010.png);}
+    70% {background-image: url(/assets/img/kakeru/screen00011.png);}
+    80% {background-image: url(/assets/img/kakeru/screen00012.png);}
+    90% {background-image: url(/assets/img/kakeru/screen00013.png);}
+    100% {background-image: url(/assets/img/kakeru/screen00014.png);}
+}
+header{
+    position: absolute;
+    /*background-color: #333;*/
+    z-index: 0;
+    width: 100%;
+    opacity:50%;
+    bottom:0;
+    text-align: right;
+    font-family: Georgia;
+    color:white;
+    border-top:1px #333 solid;
+    text-shadow: black 1px 0 15px;
+    box-shadow: 10px -10px 25px 10px rgba(0, 0, 0, .5);
+}
+header h1{
+    margin:25px;
+}
+.navi{
+    background-color: #333;
+    background-size: cover;
+    background-repeat:none;
+    animation: gradient 10s ease infinite;
+    vertical-align: middle;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 500px);
+    grid-template-columns: repeat(auto-fit, 20%);
+    
+}
+
+.navi p{
+    margin: 0;
+}
+.navi p a{
+    display: block;
+    color: white;
+    padding:200px 0;
+    margin:1px;
+    text-align: center;
+    background-image: linear-gradient(109deg, #333 100%, #000 100%,#fff 50%),url();
+    background-repeat:none;
+    background-size: cover;
+    background-position: 50% 0;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    font-size: xxx-large;
+    font-family: Georgia;
+    text-shadow: #333 1px 0 8px;
+    opacity: 80%;
+}
+/* jekyll */
+p:nth-of-type(1) a{
+    background-image:url(/assets/img/jekyll/screen00001.png);
+}
+/* py */
+p:nth-of-type(2) a{
+    background-image:url(/assets/img/py/screen00001.png);
+}
+/* hongo */
+p:nth-of-type(3) a{
+    background-image:url(/assets/img/hongo/screen00001.png);
+}
+/* across */
+p:nth-of-type(4) a{
+    background-image:url(/assets/img/across/screen00001.png);
+}
+/*  */
+p:nth-of-type(5) a{
+    background-image:url(/assets/img/mixi/screen00001.png);
+}
+
+p:nth-of-type(6) a{
+    background-image:url(/assets/img/machimura/screen00001.png);
+}
+p:nth-of-type(7) a{
+    background-image:url(/assets/img/kakeru/kakerubook01.jpeg);
+}
+.navi p a:hover{
+    animation: transform_btn 2s ease 1;
+    opacity: 100%;
+}
+
+/* css animation */
+@keyframes _gradient{
+    0% {
+		background-color: rgba(255, 210, 10, 0.7);
+	}
+	50% {
+        background-color: rgba(236, 36, 116, 0.7);
+	}
+	75% {
+        background-color: rgba(36, 236, 126, 0.7);
+	}
+	100% {
+        background-color: rgba(255, 210, 10, 0.7);
+	}
+}
+@keyframes transform_btn {
+    0%{
+        transform: scale(1),rotate(0);
+    }
+    33%{
+        transform: scale(0.91)rotate(-1deg);
+        background-color:#333;
+    }
+    100%{
+        transform: scale(1)rotate(0deg);
+    }
+}
+
+.top_btn{
+    position: absolute;
+    z-index: 65536;
+    
+}
+.top_btn a{
+    display: block;
+    border-radius: 20px 20px 0 0;
+    text-align:center;
+    padding:0 100px;
+    background-color: rgb(0, 170, 133);
+    color: white;
+    font-size: 80px;
+    opacity:80%;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, .5);
+}
+.top_btn a:hover{
+    opacity:50%;
+    animation: transform_btn 2s ease 1;
+    background-color: rgb(215, 255, 246);
+}
