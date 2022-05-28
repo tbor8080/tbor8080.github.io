@@ -58,8 +58,6 @@ function Login(){
     var digest = sha256.getHash("HEX");
     // Easy authlize
     // 本番 - sha 256
-    ref = document.referrer;
-    console.log(ref);
     url = "/"+digest+"/";
     location.replace(url);
 }
@@ -159,3 +157,4 @@ $(function(){
         },1000);
     }
 });
+// alert(location.href);
