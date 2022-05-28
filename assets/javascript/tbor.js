@@ -60,7 +60,11 @@ function Login(){
     url = "/"+digest+"/";
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
         // location.replace("./404.html");
+<<<<<<< HEAD
         // alert("PCでご覧ください。");
+=======
+        alert("PCでご覧ください。");
+>>>>>>> origin/main
         $("body").html("");
     }else{
         location.replace(url);
@@ -146,6 +150,19 @@ $(function(){
         //PC
         $("body").css("overflow","hidden");
     }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    
+=======
+    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
+        // location.replace("./404.html");
+        alert("PCでご覧ください。");
+        $("body").html("");
+    }
+>>>>>>> c566e0da003f8ec702956610867ba89c198d49e2
+>>>>>>> origin/main
     function SlideShow(){
         // slide show
         counter = 0;
