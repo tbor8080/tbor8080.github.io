@@ -29,11 +29,12 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  tbor8080
 
 # Build settings
-theme: minima
+# theme: minima
 #plugins:
 #  - jekyll-feed
 atom_feed:
     hide: true
+    
 default:
   - scope:
       path: "/assets/javascript/"
