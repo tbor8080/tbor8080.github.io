@@ -60,7 +60,7 @@ function Login(){
     url = "/"+digest+"/";
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
         // location.replace("./404.html");
-        alert("PCでご覧ください。");
+        // alert("PCでご覧ください。");
         $("body").html("");
     }else{
         location.replace(url);
@@ -79,7 +79,7 @@ $(function(){
             var image = new Image();
             str = j;
             if( j < 10 ) str = "0"+j;
-            image.src = preload_image_dir + preload_image_content + '/screen000' + str;
+            image.src = preload_image_dir + preload_image_content[i] + '/screen000' + str + '.png';
         }
     }
     var body = document.body;
@@ -146,16 +146,6 @@ $(function(){
         //PC
         $("body").css("overflow","hidden");
     }
-
-<<<<<<< HEAD
-    
-=======
-    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-        // location.replace("./404.html");
-        alert("PCでご覧ください。");
-        $("body").html("");
-    }
->>>>>>> c566e0da003f8ec702956610867ba89c198d49e2
     function SlideShow(){
         // slide show
         counter = 0;
