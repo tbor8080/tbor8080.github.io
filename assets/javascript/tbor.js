@@ -68,6 +68,7 @@ var preload_image_dir = "/assets/img/";
 var preload_image_content = ['jekyll','py','hongo','machimura','across','kakeru','mixi'];
 var _preload_num = 15;
 $(function(){
+    
     /* preload image */
     for(i=0;i<preload_image_content.length;i++){
         for(j=0;j<_preload_num;j++){
@@ -83,7 +84,7 @@ $(function(){
     var navi_a = navi + " a";
     var top_btn = ".top_btn";
     var left=($(window).innerWidth()-260)/2;
-    var height = ($(window).innerHeight() | window.pageYOffset);
+    var height = ($(window).innerHeight());
 
     if (typeof(position)=="undefined") position=0;
     var speed = 750;
@@ -105,13 +106,13 @@ $(function(){
     $(navi_a).css("height",(height/2)-400)
     $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
     $(navi_a).click(function(){
+        // document.body.requestFullscreen();
         position=Number($(this).attr("data-pos"));
         $('html, body').animate({scrollTop:position}, speed, "swing");
         $(top_btn).attr('data-pos',position-100);
         $(top_btn).animate({top:position+height-80},speed,"swing");
-        // $(top_btn).animate({left:100},speed,"swing");
         $(top_btn).css("display","block");
-        console.log($(document.body).offset().top,window.innerHeight)
+        // console.log($(document.body).offset().top,window.innerHeight)
     });
     // Back Button
     $(".top_btn a").click(function(){
@@ -125,20 +126,23 @@ $(function(){
     });
 
     $(window).resize(function(){
+        height = ($(window).innerHeight());
         pos = 0;
         for(var i=0;i<$(article).length;i++){
             pos+=height;
             $($(navi_a)[i]).attr("data-pos", pos)
         }
-        $(navi_a).css("height",(height/2)-400)
+        $(navi_a).css("height",(height/2)-400);
         $(navi).css("height", height-10);
         $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
         $('html, body').animate({scrollTop:0}, speed, "swing");
-        console.log($(window).scrollTop())
     });
-    // console.log($(window).scrollTop())
-    
-    
+
+    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)==null){
+        //PC
+        $("body").css("overflow","hidden");
+    }
+
     function SlideShow(){
         // slide show
         counter = 0;
