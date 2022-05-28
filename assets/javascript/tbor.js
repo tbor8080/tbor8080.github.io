@@ -58,7 +58,14 @@ function Login(){
     // Easy authlize
     // 本番 - sha 256
     url = "/"+digest+"/";
-    location.replace(url);
+    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
+        // location.replace("./404.html");
+        alert("PCでご覧ください。");
+        $("body").html("");
+    }else{
+        location.replace(url);
+    }
+    
 }
 /* preload image */
 var preload_image_dir = "/assets/img/";
@@ -140,11 +147,15 @@ $(function(){
         $("body").css("overflow","hidden");
     }
 
+<<<<<<< HEAD
+    
+=======
     if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
         // location.replace("./404.html");
         alert("PCでご覧ください。");
         $("body").html("");
     }
+>>>>>>> c566e0da003f8ec702956610867ba89c198d49e2
     function SlideShow(){
         // slide show
         counter = 0;
