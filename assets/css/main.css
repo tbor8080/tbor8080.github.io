@@ -262,6 +262,7 @@ p:nth-of-type(7) a{
     }
     body{
         font-size:100%;
+        overflow: scroll;
     }
     .navi p a{
         display: inline-table;
