@@ -262,6 +262,10 @@ p:nth-of-type(7) a{
     }
     body{
         font-size:100%;
+<<<<<<< HEAD
+        overflow: scroll;
+=======
+>>>>>>> origin/main
     }
     .navi p a{
         display: inline-table;
