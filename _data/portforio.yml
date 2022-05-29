@@ -1,7 +1,7 @@
 title: Portforio List
 lists :
   - title: Web Portforio by Jekyll
-    description: ウェブポートフォリオをHTML5/CSS3/Jekyllで開発、期間、2日。Chrome推奨、クロスブラウザー対応は現状していません。
+    description: ウェブポートフォリオをHTML5/CSS3/Jekyllで開発。<br>期間、2日。<br>推奨環境:Chrome(PC)/iPad/iPhone(orientation)
     url: https://tbor8080.github.io/
     schedule: 2022
     thumbnail: /assets/img/portforio/screen000001.png
