@@ -88,14 +88,15 @@ $(function(){
     var navi_a = navi + " a";
     var top_btn = ".top_btn";
     var left=($(window).innerWidth()-260)/2;
-    var height = ($(window).innerHeight());
-    $(".navi").css("min-height","50vh");
+    var height = ($(window).innerHeight() | $(window).height());
+
     if (typeof(position)=="undefined") position=0;
     var speed = 750;
     var pos = 0;
     for(var i=0;i<$(article).length;i++){
         pos+=height;
-        $($(navi_a)[i]).attr("data-pos", pos)
+        if(isResponsiveAgent()) pos+=50;
+        $($(navi_a)[i]).attr("data-pos", pos);
     }
 
     $(top_btn).css("left",left);
@@ -108,7 +109,6 @@ $(function(){
     }
     $(navi).css("height", height-10);    
     $(navi_a).css("height",(height/2)-400);
-    $("article").css("height",'auto');
     $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
     $(navi_a).click(function(){
         position=Number($(this).attr("data-pos"));
@@ -156,5 +156,8 @@ $(function(){
             $('html, body').animate({scrollTop:position}, speed, "swing");
             counter++;
         },1000);
+    }
+    if(isResponsiveAgent()){
+        // alert(height);
     }
 });
