@@ -3,8 +3,8 @@ body {
     background-color:#333;
     /* font-set */
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    /*overflow: hidden;
-    -webkit-overflow-scrolling: touch;*/
+    overflow: hidden;
+    background-color:#333;
 }
 ul{
     padding:0;
@@ -32,10 +32,10 @@ article{
     margin:0;
     height:768px;
     vertical-align: middle;
-    background-color: white;
+    
     opacity: 80%;
     position:relative;
-    background-repeat:none;
+    background-repeat:no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
@@ -139,6 +139,7 @@ header{
 }
 header h1{
     margin:25px;
+    font-size:14px;
 }
 .navi{
     background-color: #333;
@@ -148,10 +149,9 @@ header h1{
     vertical-align: middle;
     display: grid;
     grid-template-rows: repeat(auto-fit, 500px);
-    grid-template-columns: repeat(auto-fit, 20%);
+    grid-template-columns: repeat(auto-fit, 25%);
     
 }
-
 .navi p{
     margin: 0;
 }
@@ -162,15 +162,16 @@ header h1{
     margin:1px;
     text-align: center;
     background-image: linear-gradient(109deg, #333 100%, #000 100%,#fff 50%),url();
-    background-repeat:none;
-    background-size: cover;
-    background-position: 50% 0;
+    background-repeat:no-repeat;
+    background-size: 100% !important;
+    background-position: 50% 50%;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
     font-size: xxx-large;
     font-family: Georgia;
     text-shadow: #333 1px 0 8px;
     opacity: 80%;
 }
+
 /* jekyll */
 p:nth-of-type(1) a{
     background-image:url(/assets/img/jekyll/screen00001.png);
@@ -251,4 +252,54 @@ p:nth-of-type(7) a{
     opacity:50%;
     animation: transform_btn 2s ease 1;
     background-color: rgb(215, 255, 246);
+}
+
+/*  */
+@media screen and (max-width: 1280px){
+    .navi{
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+    }
+    body{
+        font-size:100%;
+    }
+    .navi p a{
+        display: inline-table;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        padding:25% 0 0 0;
+        height:100% !important;
+        width:100%;
+    }
+    .layouts{
+        padding:0;
+        margin:25% 0 !important;
+        font-size:10px !important;
+    }
+    .layouts h4 a,.layouts h4{
+        font-size:12px;
+    }
+    article{
+        background-size:100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        height:auto !important;
+    }
+}
+@media screen and (max-width: 768px){
+    .navi{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 50%);
+        grid-template-rows: repeat(auto-fit, 25%) !important;
+    }
+    .navi p a{
+        vertical-align: middle;
+        height:100% !important;
+        padding:3% 0 0 0;
+        /*background-size:100% !important;
+        background-position: 25% 50%;*/
+    }
+    .layouts{
+        margin:12% 0 !important;
+    }
 }
