@@ -107,8 +107,8 @@ $(function(){
         $(top_btn).css("display","none");
         $('html, body').animate({scrollTop:position}, speed, "swing");
     }
-    $(navi).css("height", height-10);    
-    $(navi_a).css("height",(height/2)-400);
+    $(navi).css("height", height);    
+    $(navi_a).css("height",(height/2));
     $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
     $(navi_a).click(function(){
         position=Number($(this).attr("data-pos"));
@@ -131,14 +131,17 @@ $(function(){
     $(window).resize(function(){
         height = ($(window).innerHeight());
         pos = 0;
+        position = 0;
+        left=($(window).innerWidth()-260)/2;
         for(var i=0;i<$(article).length;i++){
             pos+=height;
             $($(navi_a)[i]).attr("data-pos", pos)
         }
-        $(navi_a).css("height",(height/2)-400);
-        $(navi).css("height", height-10);
+        $('html, body').animate({scrollTop:position}, speed, "swing");
+        $(navi).css("height", height);
+        $(navi_a).css("height",(height/2));
         $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
-        $('html, body').animate({scrollTop:0}, speed, "swing");
+        $(top_btn).css("left", left);
     });
     function SlideShow(){
         // slide show

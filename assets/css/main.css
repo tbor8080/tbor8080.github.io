@@ -69,25 +69,23 @@ article hr{
 }
 article a{
     color:white;
-    animation: transform_btn 1s ease infinite;
-}
-@keyframes link_text{
-    0% {transform: scale(1),rotate(0);}
-    33% {transform: scale(1),rotate(1deg);}
-    66% {transform: scale(1),rotate(-1deg);}
-    100% {transform: scale(1),rotate(0);}
 }
 article a:hover{
     color:rgb(0, 255, 183);
 }
 article.py{animation: py 10s ease infinite;}
 article.mixi{background-image: url(/assets/img/mixi/screen00001.png);}
-article.jekyll{background-image: url(/assets/img/jekyll/screen00001.png);}
+article.jekyll{animation: jekyll 10s ease infinite;}
 article.hongo{animation: hongo 10s ease infinite;}
 article.across{animation: across 10s ease infinite;}
 article.machimura{animation: machimura 15s ease infinite;}
 article.kakeru{animation: kakeru 60s ease infinite;}
 @keyframes mixi{}
+@keyframes jekyll{
+    0% {background-image: url(/assets/img/jekyll/screen00001.png);}
+    75% {background-image: url(/assets/img/jekyll/screen00002.png);}
+    100% {background-image: url(/assets/img/jekyll/screen00001.png);}
+}
 @keyframes py{
     0% {background-image: url(/assets/img/py/screen00001.png);}
     80% {background-image: url(/assets/img/py/screen00002.png);}
@@ -159,7 +157,7 @@ header h1{
 .navi p a{
     display: block;
     color: white;
-    padding:200px 0;
+    /*padding:200px 0;*/
     margin:1px;
     text-align: center;
     background-image: linear-gradient(109deg, #333 100%, #000 100%,#fff 50%),url();
@@ -167,7 +165,7 @@ header h1{
     background-size: 100% !important;
     background-position: 50% 50%;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-    font-size: xxx-large;
+    font-size: 24px;
     font-family: Georgia;
     text-shadow: #333 1px 0 8px;
     opacity: 80%;
@@ -254,9 +252,19 @@ p:nth-of-type(7) a{
     animation: transform_btn 2s ease 1;
     background-color: rgb(215, 255, 246);
 }
-
-/*  */
 @media screen and (max-width: 1280px){
+    .navi p a{
+        display: inline-table;
+        vertical-align: middle !important;
+        padding:0;
+        font-size: 24px;
+        padding:0 0 0 0;
+        height:100% !important;
+        width:100%;
+    }
+}
+/*  */
+@media screen and (max-width: 1073px){
     .navi{
         display: grid;
         grid-template-rows: 100px 100px 100px;
@@ -269,7 +277,7 @@ p:nth-of-type(7) a{
         display: inline-table;
         vertical-align: middle;
         background-repeat: no-repeat;
-        padding:25% 0 0 0;
+        padding:0 0 0 0;
         height:100% !important;
         width:100%;
     }
