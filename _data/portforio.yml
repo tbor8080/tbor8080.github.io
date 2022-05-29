@@ -7,7 +7,7 @@ lists :
     thumbnail: /assets/img/portforio/screen000001.png
     tag: jekyll 
   
-  - title: Web App Manager Mini for Python 
+  - title: WebApp Py Env 
     description: 職業訓練校在籍中に開発環境を迅速に用意できないか相談され、プロトタイプ開発を行なっています。現在も継続。<hr>python+flask/gunicorn+sqlite3に対応、ウェブアプリ開発環境コンソールアプリ
     url: https://github.com/tbor8080/pyhongo/tree/main/app
     schedule: 2021-
