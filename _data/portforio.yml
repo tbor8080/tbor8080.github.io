@@ -1,15 +1,15 @@
 title: Portforio List
 lists :
   - title: Web Portforio by Jekyll
-    description: ウェブポートフォリオをHTML5/CSS3/Jekyllで開発、期間、2日。Chrome推奨、クロスブラウザー対応は現状していません。
+    description: ウェブポートフォリオをHTML5/CSS3/Jekyllで開発、<hr>開発期間:約2日。<br>推奨環境:Chrome(PC)/iPad(レスポンシブ対応)
     url: https://tbor8080.github.io/
     schedule: 2022
     thumbnail: /assets/img/portforio/screen000001.png
     tag: jekyll 
   
   - title: Web App Manager Mini for Python 
-    description: 職業訓練校在籍中に開発環境を迅速に用意できないか相談され、プロトタイプとして開発を行なっています。現在も継続。<br>python+flask/gunicorn+sqlite3に対応、ウェブアプリ開発環境コンソールアプリ
-    url: https://www.github.com/tbor8080/pyhongo/
+    description: 職業訓練校在籍中に開発環境を迅速に用意できないか相談され、プロトタイプ開発を行なっています。現在も継続。<hr>python+flask/gunicorn+sqlite3に対応、ウェブアプリ開発環境コンソールアプリ
+    url: https://github.com/tbor8080/pyhongo/tree/main/app
     schedule: 2021-
     thumbnail: /assets/img/py/screen000001.png
     tag: py
