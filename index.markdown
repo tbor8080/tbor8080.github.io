@@ -6,8 +6,8 @@ layout: pages
 ---
 <script type="text/javascript">
     // var count = 0;
-    var index_page = 1;
-    let tbor = new Tbor();
-    tbor.access();
+    var tbor = new Tbor();
+    tbor.index_page = 1;
+    // tbor.access();
     Login();
 </script>

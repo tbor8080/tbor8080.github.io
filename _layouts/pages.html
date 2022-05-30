@@ -17,12 +17,34 @@
         <meta name="twitter:card" content="summary" />
         <meta property="og:type" content="website" />
         <meta property="twitter:title" content="{{ site.title }}" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPS45Q08DX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-JPS45Q08DX');
+        </script>
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"{{ site.title }}","url":"{{ site.url }}{{ page.url }}"}</script>
         <!-- End Jekyll SEO tag -->
-        <link rel="stylesheet" href="/assets/css/main.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="/assets/javascript/crypt/sha.js" type="text/javascript"></script>
         <script src="/assets/javascript/tbor.js" type="text/javascript"></script>
+        <!-- preload images -->
+        <script type="text/javascript">
+            for(var i=0;i<preload_image_content.length;i++){
+                for(var j=0;j<_preload_num;j++){
+                    var img_num = j;
+                    if (j<10) img_num = "0"+j;
+                    file = "screen000{}.png".format(img_num);
+                    var pre_link = '<link rel="preload" as="image" href="{}{}/{}">'.format(preload_image_dir,preload_image_content[i],file);
+                    document.write(pre_link);
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <!-- /preload images -->
     </head>
     <body>
         {{ content }}

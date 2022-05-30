@@ -1,5 +1,6 @@
 /* Javascript Class */
 class Tbor{
+    index_page = 0;
     constructor(){
         this.storage = window.localStorage;
         this.ua = navigator.userAgent;
@@ -21,11 +22,14 @@ class Tbor{
 // 継承 /
 String.prototype.format = function(){
     // "A{}BC{}....{}".format(val1, val2, ...valN)
-    values = arguments;
-    strings = this.split(/{}/);
-    string = "";
-    for (i=0;i<values.length;i++){
-        string += strings[i]+=values[i];
+    var values = arguments;
+    var strings = this.split(/{}/);
+    if((values.length+1)!=strings.length){
+        return false;
+    }
+    var string = strings[0];
+    for (var i=0;i<values.length;i++){
+        string += values[i]+strings[i+1];
     }
     return string;
 }
@@ -46,20 +50,14 @@ else{
 }
 
 function Login(){
-    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)){
-        // location.replace("./404.html");
-        $("body").html("");
-    }else{
-        auth=prompt("パスワード:");
-        var sha256 = new jsSHA('SHA-256', "TEXT", {eccoding:'UTF-8'});
-        sha256.update(auth);
-        var digest = sha256.getHash("HEX");
-        // Easy authlize
-        // 本番 - sha 256
-        url = "/"+digest+"/";
-        location.replace(url);
-    }
-    
+    auth=prompt("パスワード:");
+    var sha256 = new jsSHA('SHA-256', "TEXT", {eccoding:'UTF-8'});
+    sha256.update(auth);
+    var digest = sha256.getHash("HEX");
+    // Easy authlize
+    // 本番 - sha 256
+    url = "/"+digest+"/";
+    location.replace(url);
 }
 /* PC:False/ETC:True */
 function isResponsiveAgent(){
@@ -73,20 +71,13 @@ var preload_image_dir = "/assets/img/";
 var preload_image_content = ['jekyll','py','hongo','machimura','across','kakeru','mixi'];
 var _preload_num = 15;
 $(function(){
-    /* preload image */
-    for(i=0;i<preload_image_content.length;i++){
-        for(j=0;j<_preload_num;j++){
-            var image = new Image();
-            str = j;
-            if( j < 10 ) str = "0"+j;
-            image.src = preload_image_dir + preload_image_content[i] + '/screen000' + str + '.png';
-        }
-    }
     var body = document.body;
     var navi = ".navi";
     var article="article";
     var navi_a = navi + " a";
     var top_btn = ".top_btn";
+    var top_btn_a = top_btn+" a";
+    var body = "html, body";
     var left=($(window).innerWidth()-260)/2;
     var height = ($(window).innerHeight() | $(window).height());
 
@@ -105,29 +96,29 @@ $(function(){
     }
     else{
         $(top_btn).css("display","none");
-        $('html, body').animate({scrollTop:position}, speed, "swing");
+        $(body).animate({scrollTop:position}, speed, "swing");
     }
     $(navi).css("height", height);    
     $(navi_a).css("height",(height/2));
     $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
     $(navi_a).click(function(){
         position=Number($(this).attr("data-pos"));
-        $('html, body').animate({scrollTop:position}, speed, "swing");
+        $(body).animate({scrollTop:position}, speed, "swing");
         $(top_btn).attr('data-pos',position-100);
         $(top_btn).animate({top:position+height-80},speed,"swing");
         $(top_btn).css("display","block");
     });
     // Back Button
-    $(".top_btn a").click(function(){
+    $(top_btn_a).click(function(){
         position=0;
         if(position==0){
             $(top_btn).css("display","none");
         }
-        $('html, body').animate({scrollTop:0}, speed, "swing");
+        $(body).animate({scrollTop:0}, speed, "swing");
         $(top_btn).attr('data-pos',position-100);
         $(top_btn).animate({top:position+400}, speed, "swing");
     });
-
+    // Event: Resize
     $(window).resize(function(){
         height = ($(window).innerHeight());
         pos = 0;
@@ -137,30 +128,10 @@ $(function(){
             pos+=height;
             $($(navi_a)[i]).attr("data-pos", pos)
         }
-        $('html, body').animate({scrollTop:position}, speed, "swing");
+        $(body).animate({scrollTop:position}, speed, "swing");
         $(navi).css("height", height);
         $(navi_a).css("height",(height/2));
         $(navi).css("grid-template-rows", "repeat(auto-fit, "+(height/2)+"px)");
         $(top_btn).css("left", left);
     });
-    function SlideShow(){
-        // slide show
-        counter = 0;
-        setID=setInterval(function(){
-            var max = $("article").length;
-            if (typeof(position)=="undefined") position=0;
-            position=Number($($(navi_a)[counter]).attr("data-pos"));
-            if ( counter % (max+1) == 0 ){
-                position=0;
-            }
-            if (counter>max){
-                clearInterval(setID);
-            }
-            $('html, body').animate({scrollTop:position}, speed, "swing");
-            counter++;
-        },1000);
-    }
-    if(isResponsiveAgent()){
-        // alert(height);
-    }
 });
