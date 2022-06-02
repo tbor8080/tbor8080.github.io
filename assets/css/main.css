@@ -42,15 +42,21 @@ article{
 }
 article .layouts{
     width:30%;
-    background-color: black;
+    /*background-color: rgb(52, 32, 17);*/
+    /*opacity:80%;*/
     color:white;
+    /*text-shadow:white 1px 1px 5px;*/
     padding: 30px;
-    margin: 360px 0;
+    margin: 15% 0 0 0;
     position: absolute;
     top:0;
     right:0;
-    opacity: 75%;
     border-radius: 20px 0 0 20px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(10px) contrast(4) grayscale(1);
+    /*border: 1px white solid;*/
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+    
 }
 article h4{
     font-size:24px;
@@ -68,7 +74,11 @@ article hr{
     opacity:20%;
 }
 article a{
-    color:white;
+   
+    color:rgb(33, 155, 121);
+}
+article a svg{
+    vertical-align: middle;
 }
 article a:hover{
     color:rgb(0, 255, 183);
@@ -169,6 +179,7 @@ header h1{
     font-family: Georgia;
     text-shadow: #333 1px 0 8px;
     opacity: 80%;
+    
 }
 
 /* jekyll */
@@ -241,16 +252,31 @@ p:nth-of-type(7) a{
     border-radius: 20px 20px 0 0;
     text-align:center;
     padding:0 100px;
-    background-color: rgb(0, 170, 133);
+    background-color: rgba(0, 170, 133,0.5);
     color: white;
     font-size: 80px;
-    opacity:80%;
     box-shadow: 0 5px 15px 5px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(5px) contrast(4);
 }
 .top_btn a:hover{
-    opacity:50%;
-    animation: transform_btn 2s ease 1;
-    background-color: rgb(215, 255, 246);
+    animation: transform_top_btn 2s ease 1;
+}
+@keyframes transform_top_btn {
+    0%{
+        background: rgba(0, 170, 133,0.5);
+        color:white;
+        
+    }
+    50%,60%{
+        background: rgba(0, 255, 195,0.5);
+        color:rgba(4, 73, 58, 0.5);
+        
+    }
+    100%{
+        background: rgba(0, 170, 133,0.5);
+        color:white;
+        
+    }
 }
 @media screen and (max-width: 1280px){
     .navi p a{
@@ -261,6 +287,9 @@ p:nth-of-type(7) a{
         padding:0 0 0 0;
         height:100% !important;
         width:100%;
+    }
+    .layouts{
+        margin:25% 0 0 0 !important;
     }
 }
 /*  */
