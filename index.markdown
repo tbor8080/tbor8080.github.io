@@ -5,9 +5,7 @@
 layout: pages
 ---
 <script type="text/javascript">
-    // var count = 0;
     var tbor = new Tbor();
     tbor.index_page = 1;
-    // tbor.access();
     Login();
 </script>
